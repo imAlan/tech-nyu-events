@@ -1,3 +1,5 @@
+# nothing works since its a WIP but personInAPI() works if you update the name
+
 from flask import Flask
 import requests, json
 import requests.packages.urllib3.contrib.pyopenssl
