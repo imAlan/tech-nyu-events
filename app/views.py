@@ -38,6 +38,10 @@ def signup():
         print "im inside!"
     return render_template('newUser.html', form=form)
 
+@app.route('/search', methods=['GET', 'POST'])
+def search():
+    return render_template('main.html')
+
 @app.route('/events')
 def events():
     headers = {'content-type': 'application/vnd.api+json', 'accept': 'application/vnd.api+json', 'x-api-key': 'uCl5Eg3Morm4alT7Y'}

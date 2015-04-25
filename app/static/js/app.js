@@ -11,7 +11,7 @@ angular.module('resignApp', [
 
 
       ret.getPeople = function(){
-        $http.get('people.json').success(function(data){
+        $http.get('../static/people.json').success(function(data){
           console.log("hello");
           for(var i = 0; i <data.length; i++){
             ret.people.push(data[i]);

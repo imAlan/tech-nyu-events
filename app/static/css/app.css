@@ -26,4 +26,15 @@
 
 .main{
     margin-top:250px;
+     font-size: 15px;
+
+}
+
+label {
+    font-size: 15px;
+}
+
+form {
+    width: 700px;
+    margin: 0 auto;
 }
