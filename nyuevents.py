@@ -1,6 +1,7 @@
-from flask import Flask
+from flask import Flask, render_template
 import requests
-
+import requests.packages.urllib3.contrib.pyopenssl
+requests.packages.urllib3.contrib.pyopenssl.inject_into_urllib3()
 
 app = Flask(__name__)
 
@@ -26,12 +27,22 @@ def hello_world():
         if data_point == 'Gender':
             user_gender = data['data']['name']
         elif data_point == 'Student ID':
-            user_NID = data['data']
+            user_NID = 'N' + data['data']
 
+    return render_template('index.html', first_name=first_name, last_name=last_name, user_NID=user_NID, user_gender=user_gender ,user_email=user_email)
 
+@app.route('/signup')
+def signup():
+    return render_template('newUser.html')
 
-    return 'Hello World!'
-
+@app.route('/events')
+def events():
+    headers = {'content-type': 'application/vnd.api+json', 'accept': 'application/vnd.api+json', 'x-api-key': 'uCl5Eg3Morm4alT7Y'}
+    r = requests.get('https://api.tnyu.org/v2/events/', headers=headers)
+    events = r.json()
+    event = events['data']
+    title = event[0]['title']
+    return title
 
 if __name__ == '__main__':
     app.run()
