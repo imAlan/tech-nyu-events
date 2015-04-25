@@ -27,6 +27,9 @@ def hello_world():
             user_gender = data['data']['name']
         elif data_point == 'Student ID':
             user_NID = data['data']
+
+
+
     return 'Hello World!'
 
 
