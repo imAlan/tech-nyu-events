@@ -3,75 +3,34 @@
 <html>
 <head>
 	<title>Person Info</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css">
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/index.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js" async></script>
 </head>
 <body>
-
-<!-- Basic form that will pass user info to Tech@NYU API to create a person  -->
-	<form method="post">
-	<!-- table is used to set up a basic structure -->
-		<table>
-			<tr>
-				<td align="right">
-					First Name:&nbsp;
-				</td>
-				<td>
-					<input type="text" name="firstName" required>
-				</td>
-			</tr>
-			<tr>
-				<td align="right">
-					Last Name:&nbsp;
-				</td>
-				<td>
-					<input type="text" name="lastName" required>
-				</td>
-			</tr>
-			<!-- NYU N# is not needed if the person isn't from NYU -->
-			<tr>
-				<td align="right">
-					NYU N# (if applicable):&nbsp;
-				</td>
-				<td>
-					<input type="text" name="nID" required>
-				</td>
-			</tr>
-			<tr>
-				<td align="right">
-					Email:&nbsp;
-				</td>
-				<td>
-					<input type="text" name="email" required>
-				</td>
-			</tr>
-			<!-- Twitter Username isn't required for a person -->
-			<tr>
-				<td align="right">
-					Twitter Username:&nbsp;
-				</td>
-				<td>
-					<input type="text" name="tUsername">
-				</td>
-			</tr>
-			<tr>
-				<td align="right">
-					Gender:&nbsp;
-				</td>
-				<td align="left">
-					<select name="gender">
-						<option value="Neutral" selected="selected">Neutral</option>
-						<option value="Male">Male</option>
-						<option value="Female">Female</option>
-					</select>
-				</td>
-			</tr>
-			<tr></tr>
-			<tr>
-				<td colspan="2" align="right">
-					<input type="submit">
-				</td>
-			</tr>
-		</table>
-	</form>
-
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Tech@NYU Events</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Stats</a></li>
+        <li><a href="#">Sign In</a></li>
+      </ul>
+    </div>
+  </nav>
+  <main>
+      <div class="options">
+          <a href="#">
+              <div class="old box">
+                  <h3>Search</h3>
+              </div>
+          </a>
+          <a href="#">
+              <div class="new box">
+                  <h3>New User</h3>
+              </div>
+          </a>
+      </div>
+  </main>
 </body>
 </html>

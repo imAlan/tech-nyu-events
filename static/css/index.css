@@ -1,0 +1,37 @@
+/* Quick and dirty css :( Do not try this at home */
+.old {
+    background-color: #ffebee;
+    margin-right: 50px;
+}
+
+.new {
+    background-color: #e8f5e9;
+}
+
+.box {
+    width: 300px;
+    height: 300px;
+    display: inline-block;
+    text-align: center;
+}
+
+.options {
+    width: 660px;
+    margin: 100px auto;
+}
+
+h3 {
+    position: relative;
+    margin-top: 120px;
+    display: inline-block;
+}
+
+.signup {
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.submit {
+    float: right;
+}
