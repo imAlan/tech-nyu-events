@@ -1,0 +1,77 @@
+<!-- Form that will be autopopulated if the student uses their NYU ID to check in -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Person Info</title>
+</head>
+<body>
+
+<!-- Basic form that will pass user info to Tech@NYU API to create a person  -->
+	<form metdod="post">
+	<!-- table is used to set up a basic structure -->
+		<table>
+			<tr>
+				<td align="right">
+					First Name:&nbsp;
+				</td>
+				<td>
+					<input type="text" name="firstName" required>
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+					Last Name:&nbsp;
+				</td>
+				<td>
+					<input type="text" name="lastName" required>
+				</td>
+			</tr>
+			<!-- NYU N# is not needed if the person isn't from NYU -->
+			<tr>
+				<td align="right">
+					NYU N# (if applicable):&nbsp;
+				</td>
+				<td>
+					<input type="text" name="nID" required>
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+					Email:&nbsp;
+				</td>
+				<td>
+					<input type="text" name="email" required>
+				</td>
+			</tr>
+			<!-- Twitter Username isn't required for a person -->
+			<tr>
+				<td align="right">
+					Twitter Username:&nbsp;
+				</td>
+				<td>
+					<input type="text" name="tUsername">
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+					Gender:&nbsp;
+				</td>
+				<td align="left">
+					<select name="gender">
+						<option value="Neutral" selected="selected">Neutral</option>
+						<option value="Male">Male</option>
+						<option value="Female">Female</option>
+					</select>
+				</td>
+			</tr>
+			<tr></tr>
+			<tr>
+				<td colspan="2" align="right">
+					<input type="submit">
+				</td>
+			</tr>
+		</table>
+	</form>
+
+</body>
+</html>
