@@ -1,0 +1,88 @@
+<!-- Form that will be autopopulated if the student uses their NYU ID to check in -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Person Info</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css">
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/index.css') }}">
+        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Work',     11],
+          ['Eat',      2],
+          ['Commute',  2],
+          ['Watch TV', 2],
+          ['Sleep',    7]
+        ]);
+
+        var options = {
+          title: 'Gender'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+</head>
+<body>
+  <nav>
+    <div class="nav-wrapper">
+      <a href="/" class="brand-logo">Tech@NYU Events</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Stats</a></li>
+          <li><a href="events">Events</a></li>
+        <li><a href="#">Sign In</a></li>
+      </ul>
+    </div>
+  </nav>
+  <main>
+      <div>
+          <h3>Attendees</h3>
+            <ul class="collection">
+    <li class="collection-item avatar">
+      <img src="images/yuna.jpg" alt="" class="circle">
+      <span class="title">Title</span>
+      <p>First Line <br>
+         Second Line
+      </p>
+      <a href="#!" class="secondary-content"><i class="mdi-action-grade"></i></a>
+    </li>
+    <li class="collection-item avatar">
+      <i class="mdi-file-folder circle"></i>
+      <span class="title">Title</span>
+      <p>First Line <br>
+         Second Line
+      </p>
+      <a href="#!" class="secondary-content"><i class="mdi-action-grade"></i></a>
+    </li>
+    <li class="collection-item avatar">
+      <i class="mdi-action-assessment circle green"></i>
+      <span class="title">Title</span>
+      <p>First Line <br>
+         Second Line
+      </p>
+      <a href="#!" class="secondary-content"><i class="mdi-action-grade"></i></a>
+    </li>
+    <li class="collection-item avatar">
+      <i class="mdi-av-play-arrow circle red"></i>
+      <span class="title">Title</span>
+      <p>First Line <br>
+         Second Line
+      </p>
+      <a href="#!" class="secondary-content"><i class="mdi-action-grade"></i></a>
+    </li>
+  </ul>
+      </div>
+      <div id="piechart" style="width: 900px; height: 500px;"></div>
+  </main>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js"></script>
+</body>
+</html>

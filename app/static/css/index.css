@@ -35,3 +35,11 @@ h3 {
 .submit {
     float: right;
 }
+
+.wow {
+    display: inline;
+    float: left;
+    width: 800px;
+    margin: 0;
+    padding: 0;
+}

@@ -42,6 +42,10 @@ def signup():
 def search():
     return render_template('main.html')
 
+@app.route('/stats', methods=['GET', 'POST'])
+def stats():
+    return render_template('stats.html')
+
 @app.route('/events')
 def events():
     headers = {'content-type': 'application/vnd.api+json', 'accept': 'application/vnd.api+json', 'x-api-key': 'uCl5Eg3Morm4alT7Y'}
