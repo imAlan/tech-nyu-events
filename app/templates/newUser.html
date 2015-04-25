@@ -1,0 +1,53 @@
+<!-- Form that will be autopopulated if the student uses their NYU ID to check in -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Person Info</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css">
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+<body>
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Tech@NYU Events</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Stats</a></li>
+        <li><a href="#">Sign In</a></li>
+      </ul>
+    </div>
+  </nav>
+  <main>
+      <div class="signup">
+          <h3>Sign Up!</h3>
+        <div class="row">
+            <form class="col s12" name="signup_form" method="post">
+                {{ form.hidden_tag() }}
+              <div class="row">
+                <div class="input-field col s6">
+                    {{ form.first_name(id="first_name", type="text", class="validate") }}
+                  <label for="first_name">First Name</label>
+                </div>
+                <div class="input-field col s6">
+                    {{ form.last_name(id="last_name", type="text", class="validate") }}
+{#                  <input id="last_name" type="text" class="validate">#}
+                  <label for="last_name">Last Name</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                    {{ form.email(id="email", type="email", class="validate") }}
+                  <label for="email">Email</label>
+                </div>
+              </div>
+              <div class="row submit">
+                  {{ form.submit(class="btn", value="Submit") }}
+              </div>
+            </form>
+        </div>
+      </div>
+  </main>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js"></script>
+</body>
+</html>
