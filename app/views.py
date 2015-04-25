@@ -42,10 +42,8 @@ def signup():
 def events():
     headers = {'content-type': 'application/vnd.api+json', 'accept': 'application/vnd.api+json', 'x-api-key': 'uCl5Eg3Morm4alT7Y'}
     r = requests.get('https://api.tnyu.org/v2/events/', headers=headers)
-    events = r.json()
-    event = events['data']
-    title = event[0]['title']
-    return title
+    events = r.json()['data']
+    return render_template('events.html', events=events)
 
 if __name__ == '__main__':
     app.run()
