@@ -1,5 +1,5 @@
 'use strict';
-
+//by Brenton Durkee
 angular.module('resignApp', [
   'ui.router',
   'ui.bootstrap'

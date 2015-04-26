@@ -4,13 +4,6 @@ angular.module('resignApp', [
   'ui.router',
   'ui.bootstrap'
 ])
-  .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
-    $urlRouterProvider
-      .otherwise('/');
-
-    $locationProvider.html5Mode(true);
-  })
-
   .factory('people', function ($http) {
       var ret = {
         people: []
@@ -18,7 +11,7 @@ angular.module('resignApp', [
 
 
       ret.getPeople = function(){
-        $http.get('people.json').success(function(data){
+        $http.get('../static/people.json').success(function(data){
           console.log("hello");
           for(var i = 0; i <data.length; i++){
             ret.people.push(data[i]);
